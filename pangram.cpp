@@ -4,22 +4,15 @@
 
 using namespace std;
 
-#define int long long
+int n;
+string s;
 
 void solve(){
-    int n;
     cin >> n;
-    string s;
     cin >> s;
     set<int> st;
-    for(int i=0;i<n;i++){
-        st.insert(tolower(s[i]));
-    }
-    if(st.size() >= 26){
-        cout << "YES";
-    }else{
-        cout << "NO";
-    }
+    for(int i=0;i<n;i++) st.insert(tolower(s[i]));
+    (st.size() >= 26) ? (cout << "YES"):(cout << "NO");
 }
 
 int32_t main() {
